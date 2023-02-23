@@ -2,11 +2,11 @@
 ## Condicionales
 
 ## Estructura if
-La estructura de control condicional o de selecci´on permite ejecutar, o un  grupo de instrucciones u otro grupo si una condici´on se cumple.
+La estructura de control condicional o de selección permite ejecutar, o un  grupo de instrucciones u otro grupo si una condición se cumple.
 
-Cuando en el flujo de un programa se desea que se ejecute un grupo de instrucciones cuando un condicional se evalu´e verdadero, y que se continue con la ejecuci´on del resto del programa se haya o no ejecutado la instrucciones del condicional, se tiene un caso de condicional sin opci´on alternativa.
+Cuando en el flujo de un programa se desea que se ejecute un grupo de instrucciones cuando un condicional se evalué verdadero, y que se continue con la ejecución del resto del programa se haya o no ejecutado la instrucciones del condicional, se tiene un caso de condicional sin opción alternativa.
 
-Este tipo de estructura se suele utilizar cuando se desea agregar una evaluaci´on intermedia de una expresi´on cuando la condici´on se eval´ua verdadero, pero que no tiene impacto sobre la ejecuci´on del resto del programa que le sigue al condicional.
+Este tipo de estructura se suele utilizar cuando se desea agregar una evaluación intermedia de una expresión cuando la condición se evalúa verdadero, pero que no tiene impacto sobre la ejecución del resto del programa que le sigue al condicional.
 
 **Diagrama de flujo**
 ```mermaid
@@ -59,7 +59,7 @@ print(n)
 **Pro tip:** Por defecto *input()* trae un *string*, por lo tanto es necesario hacer la conversión al tipo de dato deseado.
 
 ## Estructura if-else
-La estructura de control condicional o de selecci´on permite ejecutar, o un  grupo de instrucciones u otro grupo si una condici´on se cumple o no.
+La estructura de control condicional o de selección permite ejecutar, o un  grupo de instrucciones u otro grupo si una condición se cumple o no.
 
 **Diagrama de flujo**
 ```mermaid
@@ -153,7 +153,7 @@ print("El valor absoluto es "+str(valor_abs))
 ```
 
 ## Estructura if-elif-else
-Otra de las opciones para utilizar una estructura condicional es la de enlazar varias estructuras condicionales, de tal manera que solamente se pueda ejecutar un grupo de instrucciones dependiendo de cual de las opciones se eval´ua verdadero. De la misma manera que en el caso del condicional tradicional la parte alternativa del final es opcional.
+Otra de las opciones para utilizar una estructura condicional es la de enlazar varias estructuras condicionales, de tal manera que solamente se pueda ejecutar un grupo de instrucciones dependiendo de cual de las opciones se evalúa verdadero. De la misma manera que en el caso del condicional tradicional la parte alternativa del final es opcional.
 
 **Diagrama de flujo**
 ```mermaid
@@ -174,24 +174,92 @@ flowchart TD;
 **Pseudocódigo**
 ```pseudocode
 bloque_previo
-si (condicion) entonces
-  bloque_verdadero
-sino 
+si (condicion_1) entonces
+  bloque_verdadero_1
+sino si (condicion_2)
+  bloque_verdadero_2
+sino si (condicion_n-1)
+  bloque_verdadero_n-1
+sino
   bloque_falso
 bloque_siguiente
 ```
 
+La codificación en Python de las estructuras condicionales enlazadas es la siguiente, donde la palabra clave elif sirve para establecer la opción
+alternativa donde después de ejecutar las instrucciones previas <bloque_previo> se ejecutará <bloque_verdadero_1> si <condicion_1> se evalúa verdadero, en caso de que <condicion_1> se evalúe falso de ejecutará <bloque_verdadero_2> si <condicion_2> se evalúa verdadero, y as´ı se continuará revisando cada una de las condiciones si la anterior se evalúa falso. Si algún <cond_n-1> se evalúa verdadero se ejecuta su respectivo <bloque__verdadero_n-1> y después de ejecutar todas las instrucciones del <bloque_verdadero_n-1> se continua ejecutando las instrucciones siguientes al condicional enlazado <bloque_siguiente>.
+Si ninguna <cond_i> se evalúa verdadero y la parte else existe al final de
+las estructuras if enlazadas entonces se ejecutarán las instrucciones del
+<bloque_falso>.
+
 **python**
 ```python
 <bloque_previo>
-if <condicion>:
-  <bloque_verdadero>
+if <condicion_1>:
+  <bloque_verdadero_1>
+elif <condicion_2>:
+  <bloque_verdadero_2>
+elif <condicion_n-1>:
+  <bloque_verdadero_n-1>
 else:
   <bloque_falso>
 bloque_siguiente
 ```
 
+**Ejemplo:** Ingrese el peso (kg) y la altura (m) y obtenga el indice de masa corporal.
+
+$$IMC = \frac{masa}{altura^2}$$
+
+<details><summary>IMC Rangos</summary><p>
+<div align='center'>
+<figure> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Body_mass_index_chart-es.svg/510px-Body_mass_index_chart-es.svg.png" alt="" width="400" height="auto"/></br>
+<figcaption><b></b></figcaption></figure>
+</div>
+</p></details><br>
+
+```python
+altura : float
+altura = float(input("Ingrese la altura en metros: ")) 
+peso : float
+peso = float(input("Ingrese el peso en kg: "))
+imc : float = (masa)/(altura**2) 
+if inc < 18.5 :
+  print("Bajo peso")
+elif imc >= 18.5 and imc < 25:
+  print("Normal")
+elif imc >= 25 and imc < 30:
+  print("Sobrepeso")
+elif imc >= 30 and imc < 40:
+  print("Obesidad")
+else:
+  print("Obesidad morbida")
+```
+
 ## Estructura match (switch)
 
-## Anidación
+## Reto 6
+Resolver los siguientes problemas usando un notebook de python y subirlos a un repo.
+
+1. Dado un número entero, determinar si ese número corresponde al código ASCII de una vocal minúscula.
+
+2. Dada una cadena de longitud 1, determine si el código ASCII de primera letra de la cadena es par o no.
+
+3. Dado un carácter, construya un programa en Python para determinar si el carácter es un d´ıgito o no.
+
+4. Dado un número real x, construya una función que permita determinar si el número es positivo, negativo o cero. Para cada caso de debe imprimir el texto que se especifica a continuación:
+ + Positivo: "El número x es positivo"
+ +  Negativo: "El número x es negativo"
+ + Cero (0): "El número x es el neutro para la suma"
+
+5. Dado el centro y el radio de un c´ırculo, determinar si un punto de R2 pertenece o no al interior del c´ırculo.
+
+6. Dadas tres longitudes positivas, determinar si con esas longitudes se
+puede construir un triángulo.
+
+
+
+
+
+
+
+
 
