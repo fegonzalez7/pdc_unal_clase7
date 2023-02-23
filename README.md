@@ -9,7 +9,7 @@ Cuando en el flujo de un programa se desea que se ejecute un grupo de instruccio
 Este tipo de estructura se suele utilizar cuando se desea agregar una evaluaci´on intermedia de una expresi´on cuando la condici´on se eval´ua verdadero, pero que no tiene impacto sobre la ejecuci´on del resto del programa que le sigue al condicional.
 
 **Diagrama de flujo**
-```
+```mermaid
 flowchart TD;
   A[bloque_previo] --> B{condicion}
   B --Sí--> C[bloque_verdadero]
@@ -62,7 +62,7 @@ print(n)
 La estructura de control condicional o de selecci´on permite ejecutar, o un  grupo de instrucciones u otro grupo si una condici´on se cumple o no.
 
 **Diagrama de flujo**
-```
+```mermaid
 flowchart TD;
   A[bloque_previo] --> B{condicion}
   B --Sí--> C[bloque_verdadero]
@@ -156,7 +156,7 @@ print("El valor absoluto es "+str(valor_abs))
 Otra de las opciones para utilizar una estructura condicional es la de enlazar varias estructuras condicionales, de tal manera que solamente se pueda ejecutar un grupo de instrucciones dependiendo de cual de las opciones se eval´ua verdadero. De la misma manera que en el caso del condicional tradicional la parte alternativa del final es opcional.
 
 **Diagrama de flujo**
-```
+```mermaid
 flowchart TD;
   A[bloque_previo] --> B{condicion_1}
   B --Sí--> C[bloque_verdadero_1]
