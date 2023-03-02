@@ -135,6 +135,19 @@ else:
     print("El numero " + str(n)+ " es mayor que 5")
 print(n)
 ```
+También se podría de este modo:
+```python
+n : int 
+n = int(input("Ingrese un numero entero: ")) # Conversion a entero
+if n >= 2 and n <= 5:
+  print("El numero " + str(n)+ " esta entre 2 y 5")
+else:
+  if n < 2:
+    print("El numero " + str(n)+ " es menor que 2")
+  else:
+    print("El numero " + str(n)+ " es mayor que 5")
+print
+```
 
 **Ejemplo:** Ingrese un dos números (a,b) e imprima cúal es el mayor, si son iguales imprima ambos números.
 ```python
@@ -150,6 +163,21 @@ else:
   if b > a:
     print(b)
 ```
+Alternativamente:
+```python
+a : float
+b : float
+a = float(input("Ingrese el primer numero: ")) 
+b = float(input("Ingrese el segundo numero: ")) 
+if a == b:
+  print(a,b)
+else:
+  if a > b:
+    print(a)
+  else:
+    print(b)
+```
+
 **Ejemplo:** Ingrese un número y determine si es positivo o negativo.
 ```python
 a : float
@@ -216,7 +244,7 @@ bloque_siguiente
 ```
 
 La codificación en Python de las estructuras condicionales enlazadas es la siguiente, donde la palabra clave elif sirve para establecer la opción
-alternativa donde después de ejecutar las instrucciones previas <bloque_previo> se ejecutará <bloque_verdadero_1> si <condicion_1> se evalúa verdadero, en caso de que <condicion_1> se evalúe falso de ejecutará <bloque_verdadero_2> si <condicion_2> se evalúa verdadero, y as´ı se continuará revisando cada una de las condiciones si la anterior se evalúa falso. Si algún <cond_n-1> se evalúa verdadero se ejecuta su respectivo <bloque__verdadero_n-1> y después de ejecutar todas las instrucciones del <bloque_verdadero_n-1> se continua ejecutando las instrucciones siguientes al condicional enlazado <bloque_siguiente>.
+alternativa donde después de ejecutar las instrucciones previas <bloque_previo> se ejecutará <bloque_verdadero_1> si <condicion_1> se evalúa verdadero, en caso de que <condicion_1> se evalúe falso de ejecutará <bloque_verdadero_2> si <condicion_2> se evalúa verdadero, y así se continuará revisando cada una de las condiciones si la anterior se evalúa falso. Si algún <cond_n-1> se evalúa verdadero se ejecuta su respectivo <bloque__verdadero_n-1> y después de ejecutar todas las instrucciones del <bloque_verdadero_n-1> se continua ejecutando las instrucciones siguientes al condicional enlazado <bloque_siguiente>.
 Si ninguna <cond_i> se evalúa verdadero y la parte else existe al final de
 las estructuras if enlazadas entonces se ejecutarán las instrucciones del
 <bloque_falso>.
@@ -249,10 +277,10 @@ $$IMC = \frac{masa}{altura^2}$$
 ```python
 altura : float
 altura = float(input("Ingrese la altura en metros: ")) 
-peso : float
-peso = float(input("Ingrese el peso en kg: "))
+masa : float
+masa = float(input("Ingrese el peso en kg: "))
 imc : float = (masa)/(altura**2) 
-if inc < 18.5 :
+if imc < 18.5 :
   print("Bajo peso")
 elif imc >= 18.5 and imc < 25:
   print("Normal")
@@ -345,23 +373,14 @@ Resolver los siguientes problemas usando un notebook de python y subirlos a un r
 
 2. Dada una cadena de longitud 1, determine si el código ASCII de primera letra de la cadena es par o no.
 
-3. Dado un carácter, construya un programa en Python para determinar si el carácter es un d´ıgito o no.
+3. Dado un carácter, construya un programa en Python para determinar si el carácter es un dígito o no.
 
-4. Dado un número real x, construya una función que permita determinar si el número es positivo, negativo o cero. Para cada caso de debe imprimir el texto que se especifica a continuación:
+4. Dado un número real x, construya un programa que permita determinar si el número es positivo, negativo o cero. Para cada caso de debe imprimir el texto que se especifica a continuación:
  + Positivo: "El número x es positivo"
- +  Negativo: "El número x es negativo"
+ + Negativo: "El número x es negativo"
  + Cero (0): "El número x es el neutro para la suma"
 
-5. Dado el centro y el radio de un c´ırculo, determinar si un punto de R2 pertenece o no al interior del c´ırculo.
+5. Dado el centro y el radio de un círculo, determinar si un punto de R2 pertenece o no al interior del círculo.
 
 6. Dadas tres longitudes positivas, determinar si con esas longitudes se
 puede construir un triángulo.
-
-
-
-
-
-
-
-
-
