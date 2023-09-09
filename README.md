@@ -83,7 +83,7 @@ else:
 <intruccion_7_bloque_1>
 <intruccion_8_bloque_1>
 ```
-**Pro tip:** Los principales erroes de sintaxis en Python es por bloques de codigo mal indentados.
+**Pro tip:** Los principales errores de sintaxis en Python es por bloques de código mal indentados.
 
 **Pro tip:** Un cambio de indentación solo se puede dar cuando se ingresa a una nueva estructura de flujo (e.g. un condicional o un bucle), un cambio de indentación en la misma secuencia constituye un error de sintaxis.
 
@@ -198,7 +198,7 @@ else:
   print("El valor absoluto es "+str(-a))
 ```
 
-### Condicional ternarario
+### Condicional ternario
 Es uan forma de abreviar el condicional cuando solo cuenta con una instrucción en el bloque de ejecución.
 
 Retomando el ejemplo del valor absoluto.
