@@ -366,7 +366,7 @@ else:
 
 
 
-## Reto 5
+## Reto 4
 Resolver los siguientes problemas usando un notebook de python y subirlos a un repo.
 
 1. Dado un número entero, determinar si ese número corresponde al código ASCII de una vocal minúscula.
