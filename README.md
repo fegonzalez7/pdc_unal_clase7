@@ -206,7 +206,7 @@ Retomando el ejemplo del valor absoluto.
 a : float
 valor_abs : float
 a = float(input("Ingrese un numero: ")) 
-valor_abs = a if a >= 0 else -a
+valor_abs = a if a >= 0 else valor_abs = -a
 print("El valor absoluto es "+str(valor_abs))
 ```
 
