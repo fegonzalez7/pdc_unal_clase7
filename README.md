@@ -1,4 +1,16 @@
 # Programación de Computadores - UNAL
+
+## Tabla de Contenidos
+- [Condicionales](#condicionales)
+  - [Estructura if](#estructura-if)
+    - [Ingreso de datos](#ingreso-de-datos)
+  - [Indentación y secuencia](#indentación-y-secuencia)
+  - [Estructura if-else](#estructura-if-else)
+    - [Condicional ternario](#condicional-ternario)
+  - [Estructura if-elif-else](#estructura-if-elif-else)
+  - [Estructura match-case](#estructura-match-case)
+  - [Reto 4](#reto-4)
+
 ## Condicionales
 
 ## Estructura if
@@ -362,9 +374,13 @@ elif lang == "Java":
 else:
   print("Lo importante no es el lenguaje, es la habilidad de resolver problemas.")
 ```
+--------
+### Ejercicios adicionales
+
+- [Python If-Else](https://www.hackerrank.com/challenges/py-if-else/problem?isFullScreen=true)
 
 
-
+--------
 
 ## Reto 4
 Resolver los siguientes problemas usando un notebook de python y subirlos a un repo.
@@ -375,12 +391,16 @@ Resolver los siguientes problemas usando un notebook de python y subirlos a un r
 
 3. Dado un carácter, construya un programa en Python para determinar si el carácter es un dígito o no.
 
-4. Dado un número real x, construya un programa que permita determinar si el número es positivo, negativo o cero. Para cada caso de debe imprimir el texto que se especifica a continuación:
+4. Realice un programa que lea dos números reales y determine si el primero es múltiplo del segundo.
+
+5. Dado un número real x, construya un programa que permita determinar si el número es positivo, negativo o cero. Para cada caso de debe imprimir el texto que se especifica a continuación:
  + Positivo: "El número x es positivo"
  + Negativo: "El número x es negativo"
  + Cero (0): "El número x es el neutro para la suma"
 
-5. Dado el centro y el radio de un círculo, determinar si un punto de R2 pertenece o no al interior del círculo.
+6. Dado el centro y el radio de un círculo, determinar si un punto de R2 pertenece o no al interior del círculo.
 
-6. Dadas tres longitudes positivas, determinar si con esas longitudes se
-puede construir un triángulo.
+7. Dadas tres longitudes positivas, determinar si con esas longitudes se puede construir un triángulo.
+
+8. Escriba un programa que reciba el nombre en minúsculas de un país de America y retorne la ciudad capital, si el país no pertenece al continente debe arrojar país no identificado (Utilice *match-case*).
+
